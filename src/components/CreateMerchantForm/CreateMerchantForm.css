@@ -1,0 +1,11 @@
+.form-group select {
+  height: 34px;
+  width: 300px;
+  padding: 2px 8px;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+}
+
+.small-text {
+  font-size: 12px;
+}
