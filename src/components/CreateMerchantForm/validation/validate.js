@@ -104,7 +104,7 @@ const validate = (values) => {
     } else if (values.primary_principal.principal_percentage_ownership > 100) {
       errors.primary_principal.principal_percentage_ownership =
         "Must less than 100";
-    }  else if (values.primary_principal.principal_percentage_ownership < 1) {
+    } else if (values.primary_principal.principal_percentage_ownership < 1) {
       errors.primary_principal.principal_percentage_ownership =
         "Must be more than 0";
     }
@@ -220,8 +220,7 @@ const validate = (values) => {
     parseFloat(values.card_present_percentage) > 100 ||
     parseFloat(values.card_present_percentage) < 0
   ) {
-    errors.card_present_percentage =
-      "Must be less than 100 and greater than 0";
+    errors.card_present_percentage = "Must be less than 100 and greater than 0";
   }
 
   if (!values.ecommerce_percentage) {
@@ -230,8 +229,7 @@ const validate = (values) => {
     parseFloat(values.ecommerce_percentage) > 100 ||
     parseFloat(values.ecommerce_percentage) < 0
   ) {
-    errors.ecommerce_percentage =
-      "Must be less than 100 and greater than 0";
+    errors.ecommerce_percentage = "Must be less than 100 and greater than 0";
   }
 
   if (!values.mail_order_telephone_order_percentage) {
@@ -240,7 +238,8 @@ const validate = (values) => {
     parseFloat(values.mail_order_telephone_order_percentage) > 100 ||
     parseFloat(values.mail_order_telephone_order_percentage) < 0
   ) {
-    errors.mail_order_telephone_order_percentage = "Must be less than 100 and greater than 0";
+    errors.mail_order_telephone_order_percentage =
+      "Must be less than 100 and greater than 0";
   }
 
   if (!values.refund_policy) {
@@ -309,6 +308,19 @@ const validate = (values) => {
   if (!values.bank_account_number) {
     errors.bank_account_number = "Required";
   }
+
+  if (!values.merchant_agreement_acceptance) {
+    errors.merchant_agreement_acceptance = "Required";
+  } else if (values.merchant_agreement_acceptance !== true) {
+    errors.merchant_agreement_acceptance = "Must be selected to continue";
+  }
+
+  if (!values.credit_check_allowed) {
+    errors.credit_check_allowed = "Required";
+  } else if (values.credit_check_allowed !== true) {
+    errors.credit_check_allowed = "Must be selected to continue";
+  }
+
   return errors;
 };
 

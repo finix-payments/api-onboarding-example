@@ -9,3 +9,18 @@
 .small-text {
   font-size: 12px;
 }
+
+.previous {
+  background-color: white !important;
+    color: #007bff !important;
+    margin-right: 10px;
+}
+
+.form-navigation {
+  font-size: 12px;
+  padding-top: 10px;
+}
+
+.subtitle {
+  color: gray
+}
