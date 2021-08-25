@@ -15,10 +15,9 @@ export class Home extends Component {
             <div className="row justify-content-center">
               <div className="col-xl-6">
                 <div className="text-center text-white">
-                  <h1 className="mb-5">Bikes ready for take off</h1>
+                  <h1 className="mb-5">Manage Inventory. Track Repairs. Scale your business</h1>
                   <p>
-                    Bike Lane is the world's leading bike seller. Join our team
-                    to get access to our payment processing and dealer network.
+                    With our our state of the art software and payment processing, we allow you to get time back to focus on what you love most.  
                   </p>
                   <div className="">
                     <Link to="/create">
