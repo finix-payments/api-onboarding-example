@@ -117,7 +117,7 @@ export default (async function submitMerchantApplication(values) {
           values.business_to_business_volume_percentage
         ),
         business_to_consumer_volume_percentage: Number(
-          values.business_to_business_volume_percentage
+          values.business_to_consumer_volume_percentage
         ),
         person_to_person_volume_percentage: Number(
           values.person_to_person_volume_percentage
@@ -125,6 +125,9 @@ export default (async function submitMerchantApplication(values) {
         consumer_to_consumer_volume_percentage: Number(
           values.consumer_to_consumer_volume_percentage
         ),
+        other_volume_percentage: Number(
+          values.other_volume_percentage
+        )
       },
     },
   });
