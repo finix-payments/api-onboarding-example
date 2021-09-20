@@ -71,7 +71,7 @@ const BankAccountInformation = (props) => {
 export default reduxForm({
   form: "createMerchantForm", // a unique identifier for this form
   initialValues: initialFieldValues,
-  destroyOnUnmount: false, // <------ preserve form data
+  destroyOnUnmount: false, // <------ preserve form data 
   forceUnregisterOnUnmount: true, // <------ unregister fields on unmount
   validate, // <--- validation function given to redux-form
   warn, // <--- warning function given to redux-form
