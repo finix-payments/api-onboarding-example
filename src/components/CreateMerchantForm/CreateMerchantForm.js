@@ -11,7 +11,7 @@ import "./CreateMerchantForm.css";
 import BusinessProfile from "./formPages/BusinessProfile";
 import BusinessInformation from "./formPages/BusinessInformation";
 import AdditionalUnderwritingData from "./formPages/AdditionalUnderwritingData";
-import BankAccounts from "./formPages/BankAccountInformation";
+import BankAccounts from "./formPages/BankAccount";
 import Principals from "./formPages/Principals";
 import ProcessingInformation from "./formPages/ProcessingInformation";
 
