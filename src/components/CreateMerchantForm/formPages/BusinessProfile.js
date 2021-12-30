@@ -31,7 +31,10 @@ const BusinessProfile = (props) => {
     <Form onSubmit={handleSubmit}>
       <Container style={{ textAlign: "left", paddingTop: 20 }}>
         <h2>Business Profile </h2>
-        <div className="subtitle">Tell us about your business.</div>
+        <div className="subtitle">
+          Tell us about your business. The information you provide will be used
+          to verify your identity. Additional information may be requested.
+        </div>
         <br />
         <Field
           name="business_name"

@@ -19,26 +19,15 @@ import initialFieldValues from "../initializeValues";
 const ProcessingInformation = (props) => {
   const { handleSubmit, previousPage, pristine, submitting } = props;
 
-  // Modal 1 - Merchant Agreement
+  // Modal 1 - Finix Terms of Service
   const [showSubmerchant, setShow] = useState(false);
   const handleClose = (e) => {
     e.preventDefault();
     setShow(false);
   };
-
   const handleShowSubmerchant = (e) => {
     e.preventDefault();
     setShow(true);
-  };
-  // Modal 2 - Credit Agreement
-  const [showCredit, setShowCredit] = useState(false);
-  const handleCloseCredit = (e) => {
-    e.preventDefault();
-    setShowCredit(false);
-  };
-  const handleShowCredit = (e) => {
-    e.preventDefault();
-    setShowCredit(true);
   };
 
   return (
@@ -69,35 +58,11 @@ const ProcessingInformation = (props) => {
             label=""
             style={{ marginRight: 5 }}
           />
-          By submitting your merchant application, you agree to the{" "}
+          By continuing, you agree to the Bike Lane's Terms of Service and the{" "}
           <span onClick={handleShowSubmerchant} style={{ color: "blue" }}>
-            Sub-Merchant Agreement
+            Finix Terms of Service.
           </span>
-          , and certify that all information you have provided is complete and
-          corect. By selecting the "Submit Application" button, you are
-          accepting and agreeing to the Sub-Merchant Agreement between you and
-          Fattmerchant. You agree that your selecting “I Accept” is the legal
-          equivalent of your manual signature to the Sub-Merchant Agreement, and
-          that you consent to be legally bound by the Sub-Merchant Agreement.{" "}
-        </div>
-        <div
-          className="small-text"
-          style={{ paddingBottom: 15, paddingTop: 5 }}
-        >
-          <Field
-            name="credit_check_allowed"
-            type="checkbox"
-            component={renderCheckbox}
-            label=""
-            style={{ marginRight: 5 }}
-          />
-          You further agree to provide written authorization to undergo a credit
-          check as part of the{" "}
-          <span onClick={handleShowCredit} style={{ color: "blue" }}>
-            FCRA Permissible Purpose Guidelines.
-          </span>
-        </div>
-        <div>
+          <div style={{ paddingBottom: 5, paddingTop: 5 }} />
           <Button type="button" className="previous" onClick={previousPage}>
             Previous
           </Button>
@@ -115,40 +80,18 @@ const ProcessingInformation = (props) => {
           <Modal.Header
           //closeButton
           >
-            <Modal.Title>Sub-Merchant Agreement</Modal.Title>
+            <Modal.Title>Finix Terms of Service</Modal.Title>
           </Modal.Header>
           <Modal.Body>
             <Iframe
-              url="https://finix-hosted-content.s3.amazonaws.com/flex/v1/terms-and-conditions.html"
+              url="https://finix-hosted-content.s3.amazonaws.com/flex/v2/finix-terms-of-service.html"
               width="100%"
+              height="600"
+              frameBorder="0"
             ></Iframe>
           </Modal.Body>
           <Modal.Footer>
             <Button type="button" variant="primary" onClick={handleClose}>
-              Close
-            </Button>
-          </Modal.Footer>
-        </Modal>
-
-        <Modal
-          show={showCredit}
-          //onHide={handleCloseCredit}
-          size="lg"
-          id="credit_check_modal"
-        >
-          <Modal.Header
-          //closeButton
-          >
-            <Modal.Title>Fair Credit Reporting Act</Modal.Title>
-          </Modal.Header>
-          <Modal.Body>
-            <Iframe
-              url="https://finix-hosted-content.s3.amazonaws.com/flex/v1/credit-check-notice.html"
-              width="100%"
-            ></Iframe>
-          </Modal.Body>
-          <Modal.Footer>
-            <Button type="button" variant="primary" onClick={handleCloseCredit}>
               Close
             </Button>
           </Modal.Footer>

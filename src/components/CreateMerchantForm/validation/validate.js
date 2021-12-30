@@ -315,12 +315,6 @@ const validate = (values) => {
     errors.merchant_agreement_acceptance = "Must be selected to continue";
   }
 
-  if (!values.credit_check_allowed) {
-    errors.credit_check_allowed = "Required";
-  } else if (values.credit_check_allowed !== true) {
-    errors.credit_check_allowed = "Must be selected to continue";
-  }
-
   return errors;
 };
 
