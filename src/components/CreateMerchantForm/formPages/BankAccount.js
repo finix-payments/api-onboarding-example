@@ -49,10 +49,7 @@ const BankAccountInformation = (props) => {
 
         <div className="small-text">
           You agree to use this account for legitimate business purposes and not
-          for personal, family, or household purposes. To help the U.S.
-          government fight terrorism and money laundering, federal law requires
-          us to obtain, verify, and record information identifying each person
-          opening an account. We may also ask for other identifying information.
+          for personal, family, or household purposes.
         </div>
         <br />
         <div>
@@ -71,7 +68,7 @@ const BankAccountInformation = (props) => {
 export default reduxForm({
   form: "createMerchantForm", // a unique identifier for this form
   initialValues: initialFieldValues,
-  destroyOnUnmount: false, // <------ preserve form data 
+  destroyOnUnmount: false, // <------ preserve form data
   forceUnregisterOnUnmount: true, // <------ unregister fields on unmount
   validate, // <--- validation function given to redux-form
   warn, // <--- warning function given to redux-form
