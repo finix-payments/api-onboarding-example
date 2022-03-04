@@ -21,7 +21,7 @@ export class NavBar extends Component {
         <Nav className="mr-auto">
           <NavLink
             to="/"
-            activeStyle={{
+            activestyle={{
               fontWeight: "bold",
               color: "white",
             }}
@@ -32,7 +32,7 @@ export class NavBar extends Component {
 
           <NavLink
             to="/create"
-            activeStyle={{
+            activestyle={{
               fontWeight: "bold",
               color: "white",
               paddingLeft: 10,

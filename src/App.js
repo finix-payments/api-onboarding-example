@@ -16,7 +16,7 @@ import {
   faCheckCircle,
 } from "@fortawesome/free-solid-svg-icons";
 
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 library.add(faInfoCircle, faCreditCard, faMoneyCheckAlt, faUser, faCheckCircle);
 
@@ -27,17 +27,19 @@ class App extends Component {
         <BrowserRouter>
           <div className="App">
             <NavBar />
-            <Switch>
-              <Route path="/create">
-                <CreateMerchantForm onSubmit={submitMerchantApplication} />
-              </Route>
-              <Route path="/application-submitted">
-                <MerchantApplicationStatus />
-              </Route>
-              <Route exact path="/">
-                <Home />
-              </Route>
-            </Switch>
+            <Routes>
+              <Route
+                path="/create"
+                element={
+                  <CreateMerchantForm onSubmit={submitMerchantApplication} />
+                }
+              />
+              <Route
+                path="/application-submitted"
+                element={<MerchantApplicationStatus />}
+              />
+              <Route path="/" element={<Home />} />
+            </Routes>
           </div>
         </BrowserRouter>
       </Provider>
