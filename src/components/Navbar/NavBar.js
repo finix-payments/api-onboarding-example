@@ -41,6 +41,18 @@ export class NavBar extends Component {
           >
             Create Account
           </NavLink>
+
+          <NavLink
+          to="/upload"
+          activestyle={{
+            fontWeight: "bold",
+            color: "white",
+            paddingLeft: 10,
+          }}
+          style={{ color: "white", paddingLeft: 10 }}
+          >
+            Upload File
+          </NavLink>
         </Nav>
       </Navbar>
     );

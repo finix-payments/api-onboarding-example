@@ -1,0 +1,79 @@
+.FileUploader {
+  padding-top: 20px;
+}
+
+.FileUploader label {
+    font-weight: bold;
+  }
+
+  .FileUploader  .dropzone {
+    border: 2px dashed lightgray;
+    height: 175px;
+    overflow-y: scroll;
+    cursor: pointer;
+
+    border-radius: 10px;
+  }
+
+
+  .FileUploader  .dropzone .item {
+    margin-bottom: 5px;
+  }
+
+  .FileUploader  .dropzone .instructions {
+    text-align: center;
+  }
+
+  .FileUploader  .dropzone .instructions .icons {
+    margin-top: 20px;
+    opacity: 1;
+    color: lightblue;
+    padding-bottom: 10px;
+  }
+
+  .FileUploader  .dropzone .instructions .icons .uploadIcon {
+    font-size: 54px;
+  }
+
+  .FileUploader  .dropzone .instructions .icons .fileIcon::before {
+    background-color: white;
+  }
+
+  .FileUploader  .dropzone .instructions .icons.fileIcon {
+    font-size: 25px;
+    top: 28px;
+    left: 20px;
+  }
+
+  .FileUploader  .dropzone .instructions li {
+    color: gray;
+  }
+
+  .FileUploader  .dropzone .instructions li:not(.main) {
+    font-size: 0.8em;
+  }
+
+  .FileUploader .dropzone .files {
+    text-align: center;
+  }
+
+  .FileUploader .dropzone .files li {
+    font-weight: bold;
+    font-size: 1.2em;
+  }
+
+  .FileUploader  .error {
+      color: red;
+  }
+
+  .FileUploader ul, ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .FileUploader li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
