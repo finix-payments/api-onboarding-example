@@ -1,0 +1,26 @@
+.form-group select {
+    height: 34px;
+    width: 300px;
+    padding: 2px 8 px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+}
+
+.small-text {
+    font-size: 12px;
+}
+
+.previous {
+    background-color: white !important;
+    color: #007bff !important;
+    margin-right: 10px;
+}
+
+.form-navigation {
+    font-size: 12px;
+    padding-top: 10px;
+}
+
+.subtitle {
+    color: gray;
+}

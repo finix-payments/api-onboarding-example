@@ -4,10 +4,13 @@ import { NavBar } from "./components/Navbar/NavBar";
 import { Provider } from "react-redux";
 import store from "./store";
 import CreateMerchantForm from "./components/CreateMerchantForm/CreateMerchantForm";
+import submitFile from "./components/FileUploaderForm/submitFile";
 import React, { Component } from "react";
 import submitMerchantApplication from "./components/CreateMerchantForm/submitMerchantApplication";
 import { MerchantApplicationStatus } from "./components/MerchantApplicationStatus/MerchantApplicationStatus";
 import { library } from "@fortawesome/fontawesome-svg-core";
+import FileUploaderForm from "./components/FileUploaderForm/FileUploaderForm";
+import { FileUploadedStatus } from "./components/FileUploadedStatus/FileUploadedStatus";
 import {
   faInfoCircle,
   faCreditCard,
@@ -28,6 +31,17 @@ class App extends Component {
           <div className="App">
             <NavBar />
             <Routes>
+              <Route
+                path="/upload"
+                element={
+                  <FileUploaderForm onSubmit={submitFile} />
+                }
+              />
+              <Route 
+                path="/file-uploaded"
+                element={<FileUploadedStatus />
+                }
+              />
               <Route
                 path="/create"
                 element={
